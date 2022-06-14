@@ -1,0 +1,13 @@
+tasks:
+  hello-job:
+    runner: sonarsource/sonar-scanner-cli
+    steps:
+   
+    - checkout    
+    - commands:
+      - |
+      sonar-scanner \
+       -Dsonar.projectKey=ruby \
+       -Dsonar.sources=. \
+       -Dsonar.host.url=http://13.233.126.85:9000 \
+       -Dsonar.login=0a6d4c4d4704991b4efebdb329dcedf2c7e75151
